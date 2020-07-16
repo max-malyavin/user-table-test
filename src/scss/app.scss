@@ -1,0 +1,40 @@
+@import 'variables';
+@import 'libs/normalize';
+
+@import '~antd/dist/antd.css';
+@import 'components/all';
+
+html{
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.container {
+  width: $container-width;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+body {
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 15px;
+  background-color: $background;
+  line-height: 24px;
+  font-weight: 400;
+}
+#root{
+  height: 100vh;
+}
+

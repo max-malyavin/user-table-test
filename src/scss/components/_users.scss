@@ -1,0 +1,14 @@
+@import 'variables';
+
+.users__delete,
+.users__edit{ 
+    cursor: pointer;
+}
+.users__delete{
+    position: relative;
+  
+}
+.users__edit {
+    margin-left: 15px;
+    margin-right: 15px;
+}

@@ -1,0 +1,10 @@
+@import 'variables';
+.succes__delete {
+    position: absolute;
+    left: -30px;
+}
+// style={{position: 'absolute', right: -90}}
+.failed__delete {
+    position: absolute;
+    left: -90px;
+}
