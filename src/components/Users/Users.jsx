@@ -8,7 +8,7 @@ import { validateMessages } from '../../Common/Validate/Validate';
 import { successDelete, failedDelete } from './ErrorsDelete';
 import { loadingUsers } from './LoadingUsers';
 import { Link } from 'react-router-dom';
-
+import { DeleteOutlined,EditOutlined } from '@ant-design/icons';
 
 
 
@@ -52,7 +52,7 @@ export default ({users,loading,success,failed,errors}) => {
           render: ({id}) => { 
               return <> 
             <a className='users__delete' onClick={() => handleDelete(id)}>
-                 Удалить
+              <DeleteOutlined style={{fontSize: '20px'}} />
                 {successDelete(currentID,id,success)}
                 {failedDelete(currentID,id,failed)}
             </a>
@@ -61,7 +61,7 @@ export default ({users,loading,success,failed,errors}) => {
                 setcurrentID(id)
                 setFormEditVisible(true)
                 }} className='users__edit'>     
-                 Редактировать
+                <EditOutlined style={{fontSize: '20px'}}/> 
                </a>
             <Link to={`users/${id}`}>     
                  В профиль
@@ -78,6 +78,7 @@ export default ({users,loading,success,failed,errors}) => {
        {/* { Можно было разнести на компонент} */}
     {errors.errors.length ? <Alert message={errors.errors[0].message}
      description={<span>Статус: {errors.errors[0].status}</span>} type="error"/> : null}
+
             <Modal title="Basic Modal" visible={visible}
               onOk={()=> {
                 setVisible(false)
